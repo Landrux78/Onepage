@@ -7,6 +7,21 @@
     text-decoration: none;
 }
 
+:root{
+    --color_text-primary: #AB29CA;
+    --color_text-secondary: #101e2c;
+    --color_text-tertiary: #485663;
+    --main_color-primary: #9a00bf;
+    --main_color_secondary: #f4d4fb;
+    --background_color: #fafbfe;
+    --lowText_font_size: 16px;
+    --text_size_litle: 40px;
+    --text_litle_card: 24px;
+    --text_litle_cardv2: 20px;
+    --text_paragraph: 16px;
+    --box_shadow-primary: 0 6px 50px -20px rgba(0,0,0,0.2);
+}
+
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -23,6 +38,9 @@ header{
     height: 100%;
     margin: auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .logo{
@@ -49,17 +67,17 @@ header{
     margin: 20px 16px;
 }
 .menu nav ul li a{
-    color: #000; /*Variable*/
-    font-size: 16px; /*Variable*/
+    color: var(--color_text-secondary); /*Variable*/
+    font-size: var(--lowText_font_size); /*Variable*/
     position: relative;
 }
 .menu nav ul li a:hover{
-    color: blueviolet; /*Variable*/
+    color: var(--color_text-primary); /*Variable*/
 }
 .btn__quote{
     display: block;
     padding: 8px 40px;
-    border: 2px solid #9a00bf; /*Variable*/
+    border: 2px solid var(--main_color-primary); /*Variable*/
     border-radius: 8px;
     font-weight: 500;
     margin: 0 20px;
@@ -68,7 +86,7 @@ header{
 
 .btn__quote:hover{
     color: #fff;
-    background: #9a00bf;
+    background: var(--main_color-primary);
 }
 .menu .socialMedia{
     margin: 0 10px;
@@ -78,4 +96,66 @@ header{
 }
 .menu .socialMedia img{
     width: 25px;
+}
+
+/*portada de inicio*/
+
+.container__cover{
+    padding-top: 100px;
+    padding-bottom:100px;
+    background: var(--main_color_secondary);
+}
+.cover{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.text__cover{
+    width: 100%;
+    padding-right: 150px;
+}
+
+.text__cover h1{
+    font-size: 50px;
+    color: var(--color_text-secondary);
+}
+
+.text__cover p{
+    font-size:var(--text_paragraph);
+    margin-top: 40px;
+    color: var(--color_text-tertiary);
+}
+
+.btn__text{
+    display: block;
+    width:150px;
+    margin-top: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 500;
+    background: var(--main_color-primary);
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.btn__text:hover{
+    background: transparent;
+    border: 2px solid var(--main_color-primary);
+    color: var(--main_color-primary
+    );
+}
+
+.image__cover{
+    width: 100%;
+}
+
+.image__cover img{
+    width: 550px;
 }
